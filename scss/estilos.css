@@ -1,0 +1,876 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;500&display=swap");
+footer {
+  padding-top: 50px;
+}
+footer ul {
+  font-weight: bold;
+  -moz-text-align-last: center;
+       text-align-last: center;
+}
+footer img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.a {
+  color: white;
+  text-decoration: none;
+  margin-left: 10px;
+}
+.a:hover {
+  color: black;
+}
+
+.aNav {
+  background-color: #168DC0;
+  opacity: 60%;
+  font-family: "Overpass", sans-serif;
+}
+
+body {
+  background-image: url(../media/fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-animation: img-background 10s linear infinite alternate;
+          animation: img-background 10s linear infinite alternate;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+}
+
+/* Animancion imagen fondo*/
+.animacionDiv {
+  background-image: url(../media/prueba.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-animation: img-background 10s linear infinite alternate;
+          animation: img-background 10s linear infinite alternate;
+  height: 200px;
+}
+
+@-webkit-keyframes img-background {
+  from {
+    background-position: top right;
+  }
+  to {
+    background-position: bottom left;
+  }
+}
+
+@keyframes img-background {
+  from {
+    background-position: top right;
+  }
+  to {
+    background-position: bottom left;
+  }
+}
+.formularioIngresoInput {
+  width: 90%;
+  height: 30px;
+  margin: 0.5rem;
+}
+
+.botonFormulario {
+  background-color: #168DC0;
+  color: white;
+  transition: all 1.5s;
+  border: none;
+  width: auto;
+}
+.botonFormulario:hover {
+  background-color: #9C9D9C;
+  transform: scale(1.03);
+}
+
+.btnss, #btnRechazada, #btnAcP, #btnAceptada {
+  font-family: "Overpass", sans-serif;
+  width: auto;
+  background-color: #168DC0;
+  color: white;
+  border: 0px;
+  padding: 5px;
+  margin: 5px;
+  transition: all 1s;
+}
+
+.pruebaMixin {
+  transform: scale(1.03);
+  border-radius: 10px;
+}
+
+#btnAceptada:hover {
+  background-color: green;
+  transform: scale(1.03);
+  border-radius: 10px;
+}
+
+#btnAcP:hover {
+  background-color: #EAC428;
+  transform: scale(1.03);
+  border-radius: 10px;
+}
+
+#btnRechazada:hover {
+  background-color: red;
+  transform: scale(1.03);
+  border-radius: 10px;
+}
+
+.pCotizacion {
+  font-family: "Overpass", sans-serif;
+  padding-left: 15px;
+  font-style: italic;
+  line-height: 25px;
+}
+
+.botonInicio {
+  border: none;
+}
+
+.estiloFechaStock {
+  display: flex;
+  float: left;
+  margin-left: auto;
+  font-family: "Overpass", sans-serif;
+}
+
+/* reportes en barras */
+.caja-padre {
+  width: 100%;
+}
+
+.contenedor-reportes {
+  width: 100%;
+  padding: 5px 5px 10px;
+  background-color: white;
+  border: 2px solid;
+  border-radius: 10px;
+  font-family: "Overpass", sans-serif;
+}
+
+.titulo-reportes {
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.reportes-areas:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.detalles {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.menu {
+  position: relative;
+  border: 1px solid #168DC0;
+  border-radius: 20px;
+}
+
+.menu div {
+  position: relative;
+  width: 0;
+  height: 8px;
+  border-radius: 10px;
+  background-color: #168DC0;
+}
+
+/*animacion barras reportes*/
+.animaciones-barras, #taller-menu, #soldadura-menu, #era-menu {
+  -webkit-animation-name: barra-era;
+          animation-name: barra-era;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#soldadura-menu {
+  -webkit-animation-name: barra-soldadura;
+          animation-name: barra-soldadura;
+}
+
+#taller-menu {
+  -webkit-animation-name: barra-taller;
+          animation-name: barra-taller;
+}
+
+@-webkit-keyframes barra-era {
+  100% {
+    width: 15%;
+  }
+}
+
+@keyframes barra-era {
+  100% {
+    width: 15%;
+  }
+}
+@-webkit-keyframes barra-soldadura {
+  100% {
+    width: 75%;
+  }
+}
+@keyframes barra-soldadura {
+  100% {
+    width: 75%;
+  }
+}
+@-webkit-keyframes barra-taller {
+  100% {
+    width: 10%;
+  }
+}
+@keyframes barra-taller {
+  100% {
+    width: 10%;
+  }
+}
+/*Reporets ciculares*/
+.circular-contenedor {
+  margin-top: 2em;
+  display: flex;
+  overflow: hidden;
+  flex-wrap: wrap;
+  width: 100%;
+  background: #fff;
+}
+
+.progreso-circular {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  margin: auto;
+  background: linear-gradient(0deg, #00DDFF 50%, rgba(0, 221, 255, 0.2) 50%);
+  position: relative;
+  transform: rotate(136.8deg);
+}
+.progreso-circular:before {
+  content: "";
+  width: 12rem;
+  height: 12rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff content-box;
+  border-radius: 50%;
+  padding: 0.5em;
+  box-sizing: border-box;
+  font-size: 2rem;
+  color: #111;
+  text-align: center;
+  line-height: 8rem;
+  transform: rotate(0);
+  -webkit-animation-name: circular2;
+          animation-name: circular2;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.progreso-circular:after {
+  content: "";
+  width: 12rem;
+  height: 12rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: linear-gradient(transparent 50%, #fff 50%);
+  transform: scale(1.1) rotate(0);
+  text-align: center;
+  color: #111;
+  line-height: 13rem;
+  -webkit-animation-name: circular1;
+          animation-name: circular1;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes circular1 {
+  100% {
+    transform: scale(1.1) rotate(-136.8deg);
+    content: "76%";
+  }
+}
+@keyframes circular1 {
+  100% {
+    transform: scale(1.1) rotate(-136.8deg);
+    content: "76%";
+  }
+}
+@-webkit-keyframes circular2 {
+  100% {
+    transform: rotate(-136.8deg);
+    content: "EQUIPOS";
+  }
+}
+@keyframes circular2 {
+  100% {
+    transform: rotate(-136.8deg);
+    content: "EQUIPOS";
+  }
+}
+
+/* barras card 3*/
+.contenedor-reportes2 {
+  width: 100%;
+  padding: 5px 5px 10px;
+  background-color: white;
+  border: 2px solid;
+  border-radius: 10px;
+  font-family: "Overpass", sans-serif;
+}
+
+.cantidad {
+  text-align: right;
+  padding: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+.barras-meses, .ventas-agosto, .ventas-julio, .ventas-junio {
+  display: flex;
+  min-width: 0%;
+  background-color: #04aa6d;
+  -webkit-animation-name: barra-junio;
+          animation-name: barra-junio;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  justify-content: space-between;
+}
+
+.ventas-julio {
+  background-color: blue;
+  -webkit-animation-name: barra-julio;
+          animation-name: barra-julio;
+}
+
+.ventas-agosto {
+  background-color: blueviolet;
+  -webkit-animation-name: barra-agosto;
+          animation-name: barra-agosto;
+}
+
+@-webkit-keyframes barra-junio {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 48%;
+  }
+}
+
+@keyframes barra-junio {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 48%;
+  }
+}
+@-webkit-keyframes barra-julio {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 62%;
+  }
+}
+@keyframes barra-julio {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 62%;
+  }
+}
+@-webkit-keyframes barra-agosto {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 86%;
+  }
+}
+@keyframes barra-agosto {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 86%;
+  }
+}
+/*botonos para cards*/
+.boton-card {
+  position: relative;
+  height: auto;
+  width: auto;
+  border-radius: 6px;
+  color: white;
+  font-size: 18px;
+  background-color: #168DC0;
+  overflow: hidden;
+  transition: all 500ms ease;
+  z-index: 0;
+  border: 1px solid #168DC0;
+  font-weight: 300px;
+  /*botones no utilizados*/
+}
+.boton-card:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  background-color: #9C9D9C;
+  transition: all 500ms ease;
+  z-index: -1;
+}
+.boton-card-1:before {
+  width: 0;
+  height: 100%;
+}
+.boton-card-1:hover {
+  color: white;
+  font-weight: 300px;
+}
+.boton-card-1:hover:before {
+  width: 100%;
+}
+.boton-card-2:before {
+  left: -520px;
+  right: 0;
+  width: 100%;
+  height: 150%;
+  transition: all 1s ease;
+  transform: rotate(45deg);
+  box-shadow: 0 0 10px #168DC0, 0 0 20px #168DC0, 0 0 20px #168DC0;
+}
+.boton-card-2:hover:before {
+  left: 520px;
+}
+.boton-card-3:hover {
+  -webkit-animation: boton3 500ms 1;
+          animation: boton3 500ms 1;
+  background-color: #9C9D9C;
+  color: white;
+}
+
+@-webkit-keyframes boton3 {
+  0% {
+    box-shadow: 0 0 0 0 #9C9D9C;
+  }
+  100% {
+    box-shadow: 0 0 2px 4px #9C9D9C;
+  }
+}
+
+@keyframes boton3 {
+  0% {
+    box-shadow: 0 0 0 0 #9C9D9C;
+  }
+  100% {
+    box-shadow: 0 0 2px 4px #9C9D9C;
+  }
+}
+/* Agregamos una clase para el mensaje de error en el formulario*/
+.mensajeError small {
+  color: #e74c3c;
+  position: absolute;
+  visibility: hidden;
+}
+
+.mensajeError.Visible small {
+  visibility: visible;
+}
+
+@media screen and (min-width: 1000px) {
+  .arcos_logo, #arcos_2, #arcos_1 {
+    -webkit-animation-name: mover;
+            animation-name: mover;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .movimiento_letras, #letra_B, #letra_R, #letra_I {
+    opacity: 0;
+    -webkit-animation-name: mover_letra;
+            animation-name: mover_letra;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  #letra_I {
+    -webkit-animation-duration: 4.5s;
+            animation-duration: 4.5s;
+  }
+  #letra_R {
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+  }
+  #letra_B {
+    -webkit-animation-duration: 5.5s;
+            animation-duration: 5.5s;
+  }
+  #punto {
+    opacity: 0;
+    -webkit-animation-name: mover_letra;
+            animation-name: mover_letra;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 6s;
+            animation-duration: 6s;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  #nombre {
+    opacity: 0;
+    -webkit-animation-name: mover_frase;
+            animation-name: mover_frase;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 7s;
+            animation-duration: 7s;
+    -webkit-animation-delay: 1.5s;
+            animation-delay: 1.5s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes mover {
+    0% {
+      -webkit-transform: rotateY(360deg);
+      -webkit-transform-style: preserve-3d;
+      transform: rotateY(360deg);
+      transform-style: preserve-3d;
+    }
+    25% {
+      opacity: 0.25;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    75% {
+      opacity: 0.75;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes mover {
+    0% {
+      -webkit-transform: rotateY(360deg);
+      -webkit-transform-style: preserve-3d;
+      transform: rotateY(360deg);
+      transform-style: preserve-3d;
+    }
+    25% {
+      opacity: 0.25;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    75% {
+      opacity: 0.75;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes mover_letra {
+    0% {
+      -webkit-transform: rotateY(180deg);
+      -webkit-transform-style: preserve-3d;
+      transform: rotateY(180deg);
+      transform-style: preserve-3d;
+    }
+    25% {
+      opacity: 0.25;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    75% {
+      opacity: 0.75;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes mover_letra {
+    0% {
+      -webkit-transform: rotateY(180deg);
+      -webkit-transform-style: preserve-3d;
+      transform: rotateY(180deg);
+      transform-style: preserve-3d;
+    }
+    25% {
+      opacity: 0.25;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    75% {
+      opacity: 0.75;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes mover_frase {
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes mover_frase {
+    100% {
+      opacity: 1;
+    }
+  }
+  #main {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 15px;
+  }
+  .cotizacionAliniar {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: "Overpass", sans-serif;
+  }
+  .fieldsetCotizacion {
+    display: grid;
+    flex-flow: column;
+  }
+  .cotizacionContenedor {
+    font-family: "Overpass", sans-serif;
+    display: grid;
+    grid-template-columns: 15% 25% 10% 10% 10% 10%;
+    grid-template-rows: auto;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    row-gap: 5px;
+    justify-content: space-between;
+  }
+  .item {
+    width: 15%;
+  }
+  .articleIndex {
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+  }
+  .botonesIndex {
+    opacity: 40%;
+    border-radius: 50%;
+    border: none;
+    transition: all 2s;
+  }
+  .botonesIndex:hover {
+    transform: scale(1.05);
+    opacity: 100%;
+  }
+  .botonBorrar {
+    opacity: 40%;
+    padding-top: 20px;
+    border: none;
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    transition: all 2s;
+  }
+  .botonBorrar:hover {
+    transform: scale(1.05);
+    opacity: 100%;
+  }
+  .formularioIngreso {
+    font-family: "Overpass", sans-serif;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+  }
+  ul {
+    list-style-type: none;
+    text-align: left;
+  }
+  ul li {
+    display: inline;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-family: "Overpass", sans-serif;
+  }
+  .table-d {
+    min-width: 1000px;
+    padding-left: 150px;
+  }
+}
+@media screen and (max-width: 999px) {
+  header {
+    display: grid;
+    justify-content: center;
+    padding-left: 30px;
+    -webkit-animation-name: principal;
+            animation-name: principal;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+  }
+  @-webkit-keyframes principal {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes principal {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  section article button {
+    margin: 10px;
+  }
+  ul {
+    list-style-type: none;
+    text-align: left;
+  }
+  ul li {
+    font-family: "Overpass", sans-serif;
+  }
+  #main {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 15px;
+  }
+  .cotizacionAliniar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: "Overpass", sans-serif;
+    margin: 5px;
+  }
+  .formCotizacionCel {
+    width: 325px;
+    display: flex;
+    flex-direction: column;
+  }
+  .cotizacionContenedor {
+    font-family: "Overpass", sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    row-gap: 5px;
+  }
+  .itemCel {
+    display: none;
+  }
+  .item {
+    align-self: flex-start;
+    width: 15%;
+  }
+  .botonesIndex {
+    margin-left: 10px;
+    border-radius: 50%;
+    transition: all 2s;
+    border: none;
+  }
+  .botonesIndex:hover {
+    transform: scale(1.1);
+  }
+  .articleIndex {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    justify-content: center;
+  }
+  .formularioIngreso {
+    font-family: "Overpass", sans-serif;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+  }
+  #no-more-tables tbody, tr, td {
+    display: block;
+    font-size: "Overpass", sans-serif;
+  }
+  #no-more-tables thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  #no-more-tables td {
+    position: relative;
+    padding-left: 50%;
+    border: none;
+    border-bottom: 1px solid #eee;
+  }
+  #no-more-tables td:before {
+    content: attr(data-title);
+    position: absolute;
+    left: 6px;
+    font-weight: bold;
+  }
+  #no-more-tables tr {
+    border-bottom: 1px solid #ccc;
+  }
+  .botonBorrar {
+    opacity: 40%;
+    border: none;
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    transition: all 2s;
+  }
+  .botonBorrar:hover {
+    transform: scale(1.05);
+    opacity: 100%;
+  }
+}/*# sourceMappingURL=estilos.css.map */

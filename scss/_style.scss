@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;500&display=swap');
+
+
+footer {
+    padding-top: 50px;
+    ul{ 
+        font-weight: bold;
+        text-align-last: center;
+    }
+    img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+.a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+    &:hover {
+        color: black;
+    }
+}
+
+
+.aNav{
+    background-color: $color_irb;
+    opacity: 60%;
+    font-family: $font_irb;
+
+}
+
+
+body{
+    background-image: url(../media/fondo.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    animation: img-background 10s linear infinite alternate;
+    animation-delay: 6s;
+    
+}
+
+
+/* Animancion imagen fondo*/
+.animacionDiv{
+    background-image: url(../media/prueba.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    animation: img-background 10s linear infinite alternate;
+    height: 200px;
+}
+
+@keyframes img-background {
+    from {
+      background-position: top right;
+    }
+    to {
+      background-position: bottom left;
+    }
+}
+
+
+
+.formularioIngresoInput{
+    width: 90%;
+    height: 30px;
+    margin: 0.5rem;
+}
+
+
+
+
+.botonFormulario{
+    background-color: $color_irb;
+    color: white;
+    transition: all 1.5s;
+    border: none;
+    width: auto;
+    &:hover{
+        background-color: $color2_irb;
+        -webkit-transform: scale(1.03); transform: scale(1.03);
+    }
+    
+}
+
+
+
+.btnss{
+    font-family: $font_irb;
+    width: auto;
+    background-color: $color_irb;
+    color: white;
+    border: 0px;
+    padding: 5px;
+    margin: 5px;
+    transition: all 1s;
+
+}
+
+@mixin hover-btn{
+    -webkit-transform: scale(1.03); transform: scale(1.03);
+    border-radius: 10px;
+}
+
+
+.pruebaMixin{
+    @include hover-btn();
+}
+
+#btnAceptada{
+    @extend .btnss;
+    &:hover{
+        background-color: map-get($map: $botones_formulario, $key: btnAceptada);
+        @include hover-btn;
+    }
+}
+
+
+#btnAcP{
+    @extend .btnss;
+    &:hover{
+        background-color: map-get($map: $botones_formulario, $key: btnAcP);
+        @include hover-btn;
+    
+    }
+}
+
+
+
+#btnRechazada{
+    @extend .btnss;
+    &:hover{
+        background-color: map-get($map:$botones_formulario, $key: btnRechazada );
+        @include hover-btn;
+    
+    }
+}
+
+
+
+.pCotizacion{
+    font-family: $font_irb;
+    padding-left: 15px;
+    font-style: italic;
+    line-height: 25px;
+    
+}
+
+.botonInicio{
+
+    border: none;
+
+}
+
+.estiloFechaStock{
+    display: flex;
+    float: left;
+    margin-left: auto;
+    font-family: $font_irb;
+}
+
+
+/* reportes en barras */
+
+
+.caja-padre{
+    width: 100%;
+}
+
+.contenedor-reportes{
+    width: 100%;
+    padding: 5px 5px 10px;
+    background-color: white;
+    border: 2px solid;
+    border-radius: 10px;
+    font-family: $font_irb;
+
+}
+
+.titulo-reportes{
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.reportes-areas:not(:last-child){
+    margin-bottom: 30px;
+
+}
+
+.detalles{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.menu{
+    position: relative;
+    border: 1px solid $color_irb;
+    border-radius: 20px;
+}
+
+.menu div{
+    position: relative;
+    width: 0;
+    height: 8px;
+    border-radius: 10px;
+    background-color: $color_irb;
+}
+
+/*animacion barras reportes*/
+
+.animaciones-barras{
+    animation-name: barra-era;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+#era-menu{
+    @extend .animaciones-barras;
+
+}
+  
+#soldadura-menu{
+    @extend .animaciones-barras;
+    animation-name: barra-soldadura;
+}
+
+#taller-menu{
+    @extend .animaciones-barras;
+    animation-name: barra-taller;
+}
+
+@keyframes barra-era {
+    100%{
+        width: 15%;
+    }
+}
+
+@keyframes barra-soldadura {
+    100%{
+        width: 75%;
+    }
+}
+
+@keyframes barra-taller {
+    100%{
+        width: 10%;
+    }
+}
+
+
+/*Reporets ciculares*/
+
+
+
+.circular-contenedor {
+    margin-top: 2em;
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    width: 100%;
+    background: #fff;
+}
+
+.progreso-circular{
+    width: 12rem;
+    height: 12rem; 
+    border-radius: 50%;
+    margin: auto;
+    background: linear-gradient(
+        0deg,
+        #00DDFF 50%,
+        rgba(#00DDFF,.2) 50%
+    );
+    position: relative;
+    transform: rotate(136.8deg);
+    
+    &:before{
+        content: "";
+        width: 12rem;
+        height: 12rem;
+        position:absolute;
+        top: 0;
+        left: 0;
+        background: #fff content-box;
+        border-radius: 50%;
+        padding: .5em;
+        box-sizing: border-box;
+        font-size: 2rem;
+        color: #111;
+        text-align: center;
+        line-height: 8rem;
+        transform: rotate(0);
+        animation-name: circular2;
+        animation-duration: 4s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+    }
+    &:after{
+        content: "";
+        width: 12rem;
+        height: 12rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        background: linear-gradient(
+            transparent 50%,
+            #fff 50%,
+        );
+        transform: scale(1.1) rotate(0);
+        text-align: center;
+        color: #111;
+        line-height: 13rem;
+        animation-name: circular1;
+        animation-duration: 4s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        
+    }
+
+    @keyframes circular1 {
+        100%{
+            transform: scale(1.1) rotate(-136.8deg);
+            content: "76%";
+        }
+        
+    }
+
+    @keyframes circular2 {
+        100%{
+            transform: rotate(-136.8deg);
+            content: "EQUIPOS";
+        }
+        
+    }
+}
+
+/* barras card 3*/
+
+.contenedor-reportes2{
+    width: 100%;
+    padding: 5px 5px 10px;
+    background-color: white;
+    border: 2px solid;
+    border-radius: 10px;
+    font-family: $font_irb;
+}
+
+.cantidad{
+    
+    text-align: right;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+
+}
+
+
+.barras-meses{
+    display: flex;
+    min-width: 0%;
+    background-color: #04aa6d;
+    animation-name: barra-junio;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    justify-content: space-between;
+}
+
+.ventas-junio{
+    @extend .barras-meses
+
+}
+
+.ventas-julio{
+    @extend .barras-meses;
+    background-color: blue;
+    animation-name: barra-julio;
+}
+
+.ventas-agosto{
+    @extend .barras-meses;
+    background-color: blueviolet;
+    animation-name: barra-agosto;
+}
+
+
+@keyframes barra-junio {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 48%;
+    }
+}
+
+
+@keyframes barra-julio {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 62%;
+    }
+}
+
+@keyframes barra-agosto {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 86%;
+    }
+}
+
+
+/*botonos para cards*/
+
+
+.boton-card{
+    position: relative;
+    height: auto;
+    width: auto;
+    border-radius: 6px;
+    color: white;
+    font-size: 18px;
+    background-color: $color_irb;
+    overflow: hidden;
+    transition: all 500ms ease;
+    z-index: 0;
+    border: 1px solid $color_irb;
+    font-weight: 300px;
+    &:before{
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        margin: auto;
+        background-color: $color2_irb;
+        transition: all 500ms ease;
+        z-index: -1;
+
+    }
+    &-1:before{
+        width: 0;
+        height: 100%;
+    }
+
+    &-1:hover{
+        color: white;
+        font-weight: 300px;
+   
+        &:before{
+            width: 100%;
+        }
+    }
+    /*botones no utilizados*/
+    &-2:before{
+        left: -520px;
+        right: 0;
+        width: 100%;
+        height: 150%;
+        transition: all 1s ease;
+        transform: rotate(45deg);
+        box-shadow: 0 0 10px $color_irb, 0 0 20px $color_irb, 0 0 20px $color_irb ;
+    }
+
+    &-2:hover:before{
+        left: 520px;
+    }
+
+    &-3:hover{
+        animation: boton3 500ms 1;
+        background-color: $color2_irb;
+        color: white;
+    }
+
+    
+}
+
+@keyframes boton3{
+    0%{
+        box-shadow: 0 0 0 0 $color2_irb;
+    }
+    100%{
+        box-shadow: 0 0 2px 4px $color2_irb;
+    }
+}
+
+/* Agregamos una clase para el mensaje de error en el formulario*/
+
+.mensajeError small{
+    color: #e74c3c;
+	position: absolute;
+	//bottom: 0;
+	//left: 0;
+	visibility: hidden;
+}
+
+.mensajeError.Visible small{
+    visibility: visible;
+    
+}

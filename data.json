@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "codigo": "ED01",
+        "producto": "Electrodo",
+        "precio": 25,
+        "cantidad":6
+    },
+    {
+        "id": 2,
+        "codigo": "ED02",
+        "producto": "Ranger260",
+        "precio": 2500,
+        "cantidad":7
+    },
+    {
+        "id": 3,
+        "codigo": "ED03",
+        "producto": "Torcha",
+        "precio": 15,
+        "cantidad": 8
+    },
+    {
+        "id": 4,
+        "codigo": "ED04",
+        "producto": "Pico de Contacto",
+        "precio": 1.5,
+        "cantidad": 78
+    },
+    {
+        "id": 5,
+        "codigo": "ED05",
+        "producto": "Vantage 322",
+        "precio": 1560,
+        "cantidad": 15
+    }
+]
