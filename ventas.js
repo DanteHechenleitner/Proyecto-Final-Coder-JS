@@ -1,22 +1,7 @@
-/*let formulario = document.getElementById("formulario");
-let verStock = document.getElementById("verStock");
 
-let iva = document.getElementById("iva");
-let contenedorIva = document.getElementById("contenedorIva");
-////
-let codigo = document.getElementById("codigo");
-let producto = document.getElementById("producto");
-let cantidad = document.getElementById("cantidad");
-let precio = document.getElementById("precio");
-////
-;
-let valorTotal = document.getElementById("valorTotal")
-let agregarFila = document.getElementById("agregarFila")
-let total = document.getElementById("total")
-let cotizacion = document.getElementById("cotizacion")*/
 
 let guardarProducto = document.getElementById("guardar");
-//let valorTotal = document.getElementById("valorTotal")
+
 
 
 function agregarColumnas(){
@@ -254,7 +239,6 @@ function Arrays(valor){
 function agregarProductos(){
     const id = crearID() + 1;
 
-    console.log(codigo.length)
 
    
     let arrayFormulario = [Arrays(codigo), Arrays(producto),Arrays(cantidad), Arrays(precio)]

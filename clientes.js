@@ -57,7 +57,7 @@ function buscarClientes(){
        
     let buscarclientes = buscar.some((e) => e.cliente == clienteInput.value)
     if( buscarclientes == true){
-        //console.log(buscar.filter((e) => e.cliente == clienteInput.value))
+        
        console.log(buscar.filter((e) => e.cliente == clienteInput.value).map((e) => e.cuit))
        let mostrar = buscar.filter((e) => e.cliente == clienteInput.value).map((e) => e.cuit)
        cuitInput.innerText = mostrar
